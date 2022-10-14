@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap');
+
+.form {
+    font-family: 'Readex Pro', sans-serif;
+    font-size: 16px;
+
+}
+
+.form * {
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+.form__title {
+    font-size: 2em;
+    font-weight: 600;
+    color: #67fd99;
+}
+
+.form__desc {
+    color: #251818;
+}
+
+.form__item {
+    display: flex;
+    flex-direction: column;
+}
+
+.form__item > * {
+    align-self: flex-start  ;
+}
+
+.form__label {
+    font-weight: 600;
+    padding: 10px 0;
+    color: #02581f;
+}
+
+.form__input {
+    -webkit-appearance: none;
+
+    width: 100%;
+    max-width: 400px;
+
+    /* Fix for Safari/iOS date fields */
+    min-height: calc(0.9em + (0.8em + 2) + 0.6em);
+
+    padding: 0.8em;
+    font-size: 0.9em;
+    font-family: 'Readex Pro', sans-serif;
+
+    outline: none;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    background: #f9f9f9;
+    transition: background 0.25s, border-color 0.25s, color 0.25s;
+}
+
+.form__input:focus {
+    background: #ffffff;
+}
+
+.form__input::placeholder {
+    color: #523535;
+}
+
+.form__input--error {
+    color: #d50000;
+    background: #fff8f8;
+    border-color: #d50000;
+}
+
+.form__input--error::placeholder {
+    color: #ffbfbf;
+}
+
+.form__error {
+    padding: 10px;
+    color: #d50000;
+    font-size: 0.9em;
+    visibility: hidden;
+}
+
+.form__input--error + .form__error {
+    visibility: visible;
+}
+
+.btn {
+    padding-top: 20px;
+}
+
+.form__btn {
+    font-family: 'Readex Pro', sans-serif;
+    font-weight: 600;
+    font-size: 1.1em;
+    padding: 10px 16px;
+    margin: 10px 0;
+
+    color: #ffffff;
+    background: #14b64a;
+    border: 2px solid #0fa942;
+    border-radius: 5px;
+
+    cursor: pointer;
+    outline: none;
+
+}
+
+.form__btn:active {
+    background: #099136;
+    color: rgb(255, 60, 0)
+}   

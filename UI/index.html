@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KERAS: Breast Cancer Prediction</title>
+    <link rel="stylesheet" href="./assets/index.css">
+    <style>
+        body {
+            padding: 25px;
+            background-image: url(./assets/images/breast-cancer-awareness-ribbon-backgroundjpg.jpg);
+            background-color: rgb(2, 184, 184);
+            background-size: cover;
+            
+        }
+    </style>
+</head>
+<body>
+    
+
+    <form class="form" action="./" method="post">
+        <div class="form__title">Breast Cancer Prediction</div>
+        <p class="form__desc">This product gives a prediction/diagnosis if a lump is cancerous or not 
+        based on different features including mean radius, e.t.c</p>
+
+        <div class="form__item">
+            <label for="mean_radius" class="form__label">Mean Radius</label>
+            <input type="text" class="form__input" name="mean_radius" id="mean_radius" 
+            placeholder="Enter Mean Radius">
+        </div>
+
+        <div class="form__item">
+            <label for="mean_texture" class="form__label">Mean Texture</label>
+            <input type="text" class="form__input" name="mean_texture" id="mean_texture" 
+            placeholder="Enter Mean Texture">
+        </div>
+
+        <div class="form__item">
+            <label for="mean_perimeter" class="form__label">Mean Perimeter</label>
+            <input type="text" class="form__input" name="mean_perimeter" id="mean_perimeter" 
+            placeholder="Enter Mean Perimeter">
+        </div>
+
+        <div class="form__item">
+            <label for="mean_area" class="form__label">Mean Area</label>
+            <input type="text" class="form__input" name="mean_area" id="mean_area" 
+            placeholder="Enter Mean Area">
+        </div>
+
+        <div class="form__item">
+            <label for="mean_smoothess" class="form__label">Mean Smoothness</label>
+            <input type="text" class="form__input" name="mean_smoothess" id="mean_smoothess" 
+            placeholder="Enter Mean Smoothness">
+        </div>
+
+        <div class="form__item btn">
+            <button class="form__btn" type="submit">Diagnose</button>
+        </div>
+
+        <!-- <input type="text">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <input type="button" value="Diagnose"> -->
+    </form>
+    
+    <script src="./assets/index.js"></script>
+</body>
+</html>
