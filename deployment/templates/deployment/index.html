@@ -1,25 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KERAS: Breast Cancer Prediction</title>
-    <link rel="stylesheet" href="../static/index.css">
+{% extends "./base.html" %}
+{% load static %}
+
+{% block title %}KERAS: Breast Cancer Prediction{% endblock %}
+
+{% block style %}
+    <link rel="stylesheet" href="{% static '../static/index.css' %}">
     <style>
+        
         body {
             padding: 25px;
             background-image: url(../static/images/breast-cancer-awareness-ribbon-backgroundjpg.jpg);
             background-color: rgb(2, 184, 184);
-            background-size: cover;
-            
+            background-size: cover; 
         }
     </style>
-</head>
-<body>
-    
+{% endblock %}
 
-    <form class="form" action="./" method="post">
+{% block content %}
+
+    <form class="form" action="{% url 'deployment:predict' %}" method="post">
+        {% csrf_token %}
         <div class="form__title">Breast Cancer Prediction</div>
         <p class="form__desc">This product gives a prediction/diagnosis if a lump is cancerous or not 
         based on different features including mean radius, e.t.c</p>
@@ -49,22 +49,15 @@
         </div>
 
         <div class="form__item">
-            <label for="mean_smoothess" class="form__label">Mean Smoothness</label>
-            <input type="text" class="form__input" name="mean_smoothess" id="mean_smoothess" 
+            <label for="mean_smoothness" class="form__label">Mean Smoothness</label>
+            <input type="text" class="form__input" name="mean_smoothness" id="mean_smoothness" 
             placeholder="Enter Mean Smoothness">
         </div>
 
         <div class="form__item btn">
-            <button class="form__btn" type="submit">Diagnose</button>
+            <!-- <button class="form__btn" type="submit">Diagnose</button> -->
+            <input type="submit" value="Diagnose" class="btn">
         </div>
-
-        <!-- <input type="text">
-        <input type="text">
-        <input type="text">
-        <input type="text">
-        <input type="button" value="Diagnose"> -->
     </form>
-    
-    <script src="../static/index.js"></script>
-</body>
-</html>
+
+{% endblock %}

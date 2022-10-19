@@ -86,27 +86,38 @@
 }
 
 .btn {
-    padding-top: 20px;
-}
-
-.form__btn {
     font-family: 'Readex Pro', sans-serif;
     font-weight: 600;
     font-size: 1.1em;
     padding: 10px 16px;
     margin: 10px 0;
 
-    color: #ffffff;
-    background: #14b64a;
-    border: 2px solid #0fa942;
+    color: #02581f;
     border-radius: 5px;
 
     cursor: pointer;
     outline: none;
+    max-width: 200px;
 
 }
 
-.form__btn:active {
-    background: #099136;
-    color: rgb(255, 60, 0)
+.btn:active {
+    /* background: #099136; */
+    color: rgb(255, 60, 0);
 }   
+
+/* STYLES FOR PREDICT.HTML */
+.predict__title {
+    font-size: 3em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #088f35;
+    margin-bottom: 100px;
+}
+
+.predict__desc {
+    font-family: 'Readex Pro', sans-serif;
+    font-weight: 600;
+    font-size: 1.1em;
+    color: #251818;
+}
