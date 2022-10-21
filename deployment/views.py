@@ -18,7 +18,7 @@ def diagnose(input_data, filename):
 
     if prediction == 0:
         diagnosis = 'The tumor is Benign i.e not malignant'
-    else:
+    elif prediction == 1:
         diagnosis = 'The tumor is Malignant'
 
     return diagnosis
@@ -39,7 +39,7 @@ def predict(request):
     mean_texture = float(request.POST.get('mean_texture'))
     mean_perimeter = float(request.POST.get('mean_perimeter'))
     mean_area = float(request.POST.get('mean_area'))
-    mean_smoothness = float(request.POST.get('mean_smoothess'))
+    mean_smoothness = float(request.POST.get('mean_smoothness'))
 
     input_data = [mean_radius, mean_texture, mean_perimeter, mean_area, mean_smoothness]
     diagnosis = diagnose(input_data, filename = 'finalized_model_BreastCancer.h5')
@@ -47,6 +47,3 @@ def predict(request):
     # 
 
     return render(request, 'deployment/predict.html', {'prediction': diagnosis})
-
-
-        
